@@ -1,0 +1,30 @@
+.file-input {
+  display: none;
+}
+.file-upload{
+position: absolute;
+left: 41%;
+padding-left: 4%;
+top: 14%;
+}
+.flag{
+  width: 7%;
+  height: 7%;
+  flex-shrink: 0;
+  top: 36%;
+  position: absolute;
+  left: 47%;
+}
+.fileIcon{
+  width: 7%;
+  height: 7%;
+  top: 36%;
+  position: absolute;
+  left: 47%;
+}
+.unclaimed{
+  position: absolute;
+  top: 97%;
+  right: 62%;
+  font-size: 20px;
+}

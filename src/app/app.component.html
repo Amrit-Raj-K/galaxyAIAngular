@@ -1,0 +1,36 @@
+
+<div style="width: 1440px; height: 1024px; position: relative; background: white">
+  <div style="width: 1055px; height: 169px; left: 207px; top: 55px; position: absolute; background: #B5B8ED"></div>
+  <div style="width: 374px; height: 51px; left: 548px; top: 114px; position: absolute; color: black; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word">GALAXY INSURANCE</div>
+  <div style="width: 91px; height: 58px; left: 207px; top: 289px; position: absolute; background: #D9D9D9; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 9999px; border: 0.50px #E6D6D6 solid"></div>
+  <!-- <svg  class"fileIcon" xmlns="http://www.w3.org/2000/svg" width="44" height="41" viewBox="0 0 44 41" fill="none">
+     <path d="M43.5307 14.7315C43.3247 14.4316 43.0605 14.1891 42.7585 14.0226C42.4564 13.8562 42.1246 13.7702 41.7885 13.7714H35.6918V8.32022C35.6912 7.68296 35.4667 7.072 35.0677 6.6214C34.6686 6.17079 34.1276 5.91733 33.5633 5.91662H21.0108L19.374 1.47892C19.213 1.04045 18.9403 0.665835 18.5906 0.402551C18.2408 0.139267 17.8297 -0.000834091 17.4094 3.73589e-06H2.12841C1.56412 0.000746915 1.02314 0.254222 0.624124 0.704825C0.225112 1.15543 0.00065809 1.76636 0 2.40361V40.3069H38.745L43.9328 16.8729C44.0153 16.505 44.0219 16.1206 43.9522 15.7494C43.8825 15.3781 43.7383 15.0299 43.5307 14.7315ZM2.94704 36.9788V3.32809H16.8636L19.0463 9.2447H32.745V13.7714H11.1976C10.7044 13.7707 10.2253 13.9565 9.8366 14.2992C9.44789 14.6419 9.17201 15.1217 9.05295 15.6621L4.33427 36.9788H2.94704ZM36.4441 36.9788H7.37203L11.7728 17.0995H40.8449L36.4441 36.9788Z" fill="black"/>
+</svg> -->
+     <div style="width: 940.73px; height: 52px; left: 270.26px; top: 291.96px; position: absolute; transform: rotate(0.55deg); transform-origin: 0 0; background: #D9D9D9">
+    <input type="file" class="file-input"
+    (change)="uploadFile($event)" #fileUpload>
+
+    <div class="file-upload">
+
+       {{name}}
+
+        <button mat-mini-fab color="primary" class="upload-btn"
+          (click)="fileUpload.click()">
+            <mat-icon>attach_file</mat-icon>
+        </button>
+    </div>
+  </div>
+  <div *ngIf = "name != 'No file uploaded yet.'">
+  <div style="width: 131px; height: 102px; left: 664px; top: 355px; position: absolute; background: #81F8A3; border-radius: 9999px"></div>
+  <svg class = "flag" xmlns="http://www.w3.org/2000/svg" width="81" height="82" viewBox="0 0 81 82" fill="none">
+    <path d="M0 0V82H6.75V58.7667H81V52.4052L63.2477 32.8L81 13.1948V6.83333H6.75V0H0ZM73.4398 12.3L54.8773 32.8L73.4398 53.3H6.75V12.3H73.4398Z" fill="black"/>
+    </svg>
+  <div style="left: 711px; top: 431px; position: absolute; color: black; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">Uploaded</div>
+</div>
+</div>
+<div style="width: 457px; height: 50px; left: 207px; top: 495px; position: absolute; background: #F57676"></div>
+  <div style="width: 169px; height: 27px; left: 270px; top: 506px; position: absolute; color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">Claims for Review</div>
+<div class ="unclaimed" *ngFor="let item of failedClaimsName" >
+{{item |uppercase }}
+</div>
+<router-outlet></router-outlet>
